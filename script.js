@@ -31,7 +31,7 @@ function count() {
   timeLeft--;
   spanEl.textContent = timeLeft;
   if (timeLeft === 0) {
-    window.location.replace()
+    window.location.replace(score.html)
   }
   //build additional logic here to handle if time runs out
 }
