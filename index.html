@@ -1,20 +1,43 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Star Wars Quiz</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coding Quiz</title>
 
+        <link rel="stylesheet" href="./assests/style.css">
+    </head>
 <body>
-    <body>
-        <div class="time">Time Left - <span class="timeLeft">45</span></div>
-        <h1 class="h1">Star Wars Quiz</h1>
-        <div class="quizbody">
+    <div class="scores"><a href="scores.html">View Highscores</a> </div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="content">
+        <div id="start-screen" class="start">
+            <h1>Star Wars Quiz</h1>
+            <p>The Hardest Star Wars quiz EVER!</p>
+            <button id="start">Start the Quiz!</button>
         </div>
-    </body>
-    <script src="script.js"></script>
+
+        <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2>Congrats you finished!</h2>
+            <p>Your final score is <span id="final-score"></span></p>
+            <p> Enter your initials:
+                <input type="text" id="initials" maxlength="3">
+                <button id="submit">Submit</button>
+            </p>
+        </div>
+
+        <div id="announcement" class=""></div>
+    </div>
+    
 </body>
+<script src="./assests/questions.js"></script>
+<script src="./assests/script.js"></script>
 </html>
