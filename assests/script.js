@@ -55,13 +55,13 @@ function questionClick() {
     currentQuestionIndex++;
 
     if(currentQuestionIndex === questions.length) {
-        End();
+        endGame();
     } else {
         showQuestion();
     }
 }
 
-function End() {
+function endGame() {
     clearInterval(timerId);
 
     var endScreenEl = document.getElementById("end-screen");
@@ -78,7 +78,7 @@ function timer() {
     timerEl.textContent = time;
 
     if(time <= 0){
-        End();
+        endGame();
     }
 }
 

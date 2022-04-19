@@ -12,7 +12,12 @@ If you select the wrong answer youre told so and also lose time and points towar
 
 View deployed page - https://ianirwin18.github.io/Ian-I-codeQuiz/
 
-screen shots of page
+screen shot main page
+
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 function showHighscores() {
-    // Get highscrces from localstorage
+  // pulls scores from local storage
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
   
     highscores.sort(function(a, b) {
