@@ -90,7 +90,7 @@ function saveScore() {
 
         var newScore = {
             score: score,
-            initials: "initials"
+            initials: initials
         };
         highScores.push(newScore);
         window.localStorage.setItem("highscores", JSON.stringify(highScores));
