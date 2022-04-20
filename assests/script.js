@@ -1,6 +1,8 @@
 var currentQuestionIndex = 0;
 var time = questions.length * 8;
 var timerId;
+var score = 0;
+var initials;
 var questionsEl = document.getElementById("questions");
 var timerEl = document.getElementById("time");
 var choicesEl = document.getElementById("choices");
@@ -87,7 +89,7 @@ function saveScore() {
         var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
         var newScore = {
-            score: time,
+            score: score,
             initials: "initials"
         };
         highScores.push(newScore);
