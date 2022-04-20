@@ -21,7 +21,6 @@ function start () {
 
 function showQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
-
     var titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.title;
     choicesEl.innerHTML = "";
@@ -85,15 +84,15 @@ function timer() {
 function saveScore() {
     var initials = initialsEl.value.trim();
     if(initials !== "") {
-        var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+        var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
         var newScore = {
             score: time,
-            initials: initials
+            initials: "initials"
         };
-        highscores.push(newScore);
-        window.localStorage.setItem("highscores", JSON.stringify(highscores));
-        window.location.href = "scores.html";
+        highScores.push(newScore);
+        window.localStorage.setItem("highscores", JSON.stringify(highScores));
+        window.location.href = "Scores.html";
     }
 }
 
