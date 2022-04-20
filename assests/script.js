@@ -10,6 +10,8 @@ var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var announcementEl = document.getElementById("announcement");
+var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+console.log(highScores)
 
 function start () {
     var startScreenEl = document.getElementById("start-screen");
@@ -45,8 +47,10 @@ function questionClick() {
         }
         timerEl.textContent = time;
         announcementEl.textContent = "Wrong!";
+        score -=5
     } else {
         announcementEl.textContent = "Correct!";
+        score += 5
     }
     announcementEl.setAttribute("class", "announcement");
     setTimeout(function() {
@@ -69,7 +73,9 @@ function endGame() {
     endScreenEl.removeAttribute("class");
 
     var finalScoreEl = document.getElementById("final-score");
-    finalScoreEl.textContent = time;
+    finalScoreEl.textContent = score;
+    console.log("saveScore")
+    saveScore()
 
     questionsEl.setAttribute("class", "hide");
 }
@@ -85,16 +91,18 @@ function timer() {
 
 function saveScore() {
     var initials = initialsEl.value.trim();
+    console.log(initials)
     if(initials !== "") {
         var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-
+        console.log(highScores)
         var newScore = {
             score: score,
             initials: initials
         };
+        console.log(newScore)
         highScores.push(newScore);
         window.localStorage.setItem("highscores", JSON.stringify(highScores));
-        window.location.href = "Scores.html";
+        // window.location.href = "Scores.html";
     }
 }
 
