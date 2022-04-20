@@ -102,7 +102,7 @@ function saveScore() {
         console.log(newScore)
         highScores.push(newScore);
         window.localStorage.setItem("highscores", JSON.stringify(highScores));
-        // window.location.href = "Scores.html";
+        window.location.href = "Scores.html";
     }
 }
 
