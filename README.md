@@ -10,14 +10,16 @@ When you click start the questions pop up.
 
 If you select the wrong answer youre told so and also lose time and points towards your quiz.
 
+# Deployed page
 View deployed page - https://ianirwin18.github.io/Ian-I-codeQuiz/
 
-screen shot main page
+Screen shot main page
 
+# Site Preview
+<p align="center">
+    <img alt="Site Preview" src="./assests/screenshots/Screen Shot 2022-04-19 at 3.33.53 PM.png">
+</p>
 
-
-
-
-
-
-
+# Used video guides
+- https://www.youtube.com/watch?v=riDzcEQbX6k
+- https://www.youtube.com/watch?v=LQGTb112N_c
